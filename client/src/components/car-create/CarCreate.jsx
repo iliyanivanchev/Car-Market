@@ -26,7 +26,7 @@ export default function CarCreate() {
                     <input type="number" placeholder="Enter Car Price" name="price" />
 
                     <hr />
-                    <input type="submit" className="registerbtn" value="Create Listing" />
+                    <input type="submit" className="registerbtn" value="Create Car Listing" />
                 </form>
             </div>
         </section>

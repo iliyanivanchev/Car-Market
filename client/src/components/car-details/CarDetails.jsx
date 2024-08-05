@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CarDetails() {
     return (
         <section id="listing-details">
@@ -17,8 +19,8 @@ export default function CarDetails() {
                 sapiente.</p>
 
             <div className="listings-buttons">
-                <a href="#" className="button-list">Edit</a>
-                <a href="#" className="button-list">Delete</a>
+                <Link to="/car-edit" className="button-list">Edit</Link>
+                <Link to="#" className="button-list">Delete</Link>
             </div>
         </div>
     </section>
