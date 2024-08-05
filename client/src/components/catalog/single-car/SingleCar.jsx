@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 
-export default function SingleCar() {
+export default function SingleCar({
+    car,
+}) {
     return (
         <div className="listing">
             <div className="preview">
-                <img src="/images/audia3.jpg" />
+                <img src={car.imageUrl} />
             </div>
-            <h2>Audi A3</h2>
+            <h2>{car.brand} {car.model}</h2>
             <div className="info">
                 <div className="data-info">
-                    <h3>Year: 2018</h3>
-                    <h3>Price: 25000 $</h3>
+                    <h3>Year: {car.year}</h3>
+                    <h3>Price: {car.price} $</h3>
                 </div>
                 <div className="data-buttons">
                     <Link to="/car-details" className="button-carDetails">Details</Link>
