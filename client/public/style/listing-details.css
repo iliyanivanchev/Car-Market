@@ -1,0 +1,51 @@
+.listing-props {
+    margin-top: 16px;
+    list-style: none;
+}
+
+.listing-props>li {
+    font-size: 20px;
+}
+.listing-props>li>span {
+    font-weight: 600;
+    display: inline-block;
+    width: 80px;
+}
+
+.listings-buttons {
+    text-align: center;
+    margin: auto;
+    margin-top: 34px;
+}
+
+.button-list {
+    cursor: pointer;
+    background-color: #b6440f;
+    border: none;
+    color: white;
+    margin: auto;
+    padding: 11px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.details-info {
+    max-width: 700px;
+    margin: auto;
+}
+
+.details-info>img {
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
+    max-height: 455px;
+}
+
+.description-para {
+    margin-top: 16px;
+    font-size: 16px;
+}
