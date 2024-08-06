@@ -1,24 +1,25 @@
 import { Link } from "react-router-dom";
+import styles from './Login.module.css';
 
 export default function Login() {
     return (
         <section id="login">
-            <div className="container">
-                <form id="login-form" action="#" method="post">
+            <div className={styles["container"]}>
+                <form id="login-form">
                     <h1>Login</h1>
                     <p>Please enter your credentials.</p>
-                    <hr />
+                    <hr className={styles["hr"]} />
 
                     <p>Username</p>
-                    <input placeholder="Enter Username" name="username" type="text" />
+                    <input type="text" className={styles["input"]} placeholder="Enter Username" name="username" />
 
                     <p>Password</p>
-                    <input type="password" placeholder="Enter Password" name="password" />
-                    <input type="submit" className="registerbtn" value="Login" />
+                    <input type="password" className={styles["input"]} placeholder="Enter Password" name="password" />
+                    <input type="submit" className={styles["loginbtn"]} value="Login" />
                 </form>
-                <div className="signin">
+                <div className={styles["signin"]}>
                     <p>Dont have an account?
-                        <Link to="/register">Sign up</Link>.
+                        <Link to="/register" className={styles["link"]}>Sign up</Link>.
                     </p>
                 </div>
             </div>

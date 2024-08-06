@@ -10,9 +10,16 @@
     box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
 }
 
+/* Overwrite default styles of hr */
+
+.hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
 /* Full-width input fields */
 
-input[type="text"], input[type="number"], input[type="password"] {
+.input {
     padding: 15px;
     margin: 5px 0 22px 0;
     width: 100%;
@@ -23,16 +30,11 @@ input[type="text"], input[type="number"], input[type="password"] {
     box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
 }
 
-input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus {
+
+
+.input:focus {
     background-color: #ddd;
     outline: none;
-}
-
-/* Overwrite default styles of hr */
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
 }
 
 /* Set a style for the submit/register button */
@@ -55,7 +57,7 @@ hr {
 
 /* Add a blue text color to links */
 
-a {
+.link {
     color: dodgerblue;
     padding-left: 10px;
 }

@@ -1,17 +1,19 @@
+import styles from "./Header.module.css";
+
 import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
         <header>
-        <nav className="nav">
-            <Link className="active" to="/">Home</Link>
+        <nav className={styles["nav"]}>
+            <Link className={styles["active"]} to="/">Home</Link>
             <Link to="/catalog">Catalog</Link>
-            <div id="guest">
+            <div className={styles["guest"]}>
                 <Link to="/login">Login</Link>
                 <Link to="/register">Register</Link>
             </div>
-            <div id="profile">
-                <Link>Welcome username</Link>
+            <div className={styles["profile"]}>
+                {/* <p>Welcome username</p> */}
                 <Link to="/car-create">Create Listing</Link>
                 <Link to="/logout">Logout</Link>
             </div>

@@ -1,3 +1,15 @@
+.details-info {
+    max-width: 700px;
+    margin: auto;
+}
+
+.details-info>img {
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
+    max-height: 455px;
+}
+
 .listing-props {
     margin-top: 16px;
     list-style: none;
@@ -10,6 +22,11 @@
     font-weight: 600;
     display: inline-block;
     width: 80px;
+}
+
+.description-para {
+    margin-top: 16px;
+    font-size: 16px;
 }
 
 .listings-buttons {
@@ -33,19 +50,6 @@
     box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
 }
 
-.details-info {
-    max-width: 700px;
-    margin: auto;
-}
-
-.details-info>img {
-    display: block;
-    margin: auto;
-    margin-bottom: 16px;
-    max-height: 455px;
-}
-
-.description-para {
-    margin-top: 16px;
-    font-size: 16px;
+.button-list:hover {
+    opacity: 1;
 }

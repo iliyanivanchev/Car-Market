@@ -3,11 +3,9 @@
     overflow: hidden;
 }
 
-#profile, #guest {
+.guest, .profile {
     float: right;
 }
-
-/* Style the links inside the navigation bar */
 
 .nav a {
     float: left;
@@ -18,17 +16,27 @@
     font-size: 17px;
 }
 
-/* Change the color of links on hover */
-
 .nav a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* Add a color to the active/current link */
-
 .nav a.active {
     background-color: #b6440f;
     color: white;
     padding: 14px 34px;
+}
+
+.nav p {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav p:hover {
+    background-color: #ddd;
+    color: black;
 }

@@ -1,3 +1,5 @@
+import styles from "./App.module.css";
+
 import Header from "./components/header/Header"
 import Home from "./components/home/Home"
 import Login from "./components/login/Login"
@@ -12,10 +14,10 @@ import { Route, Routes } from "react-router-dom"
 function App() {
 
     return (
-        <div id="container">
+        <div className={styles["container"]}>
             <Header />
 
-            <main id="site-content">
+            <main className={styles["site-content"]}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />

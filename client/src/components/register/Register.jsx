@@ -1,29 +1,30 @@
 import { Link } from "react-router-dom";
+import styles from './Register.module.css';
 
 export default function Register() {
     return (
         <section id="register">
-        <div className="container">
+        <div className={styles["container"]}>
             <form id="register-form">
                 <h1>Register</h1>
                 <p>Please fill in this form to create an account.</p>
-                <hr />
+                <hr className={styles["hr"]}/>
 
                 <p>Username</p>
-                <input type="text" placeholder="Enter Username" name="username" required />
+                <input type="text" className={styles["input"]} placeholder="Enter Username" name="username" required />
 
                 <p>Password</p>
-                <input type="password" placeholder="Enter Password" name="password" required />
+                <input type="password" className={styles["input"]} placeholder="Enter Password" name="password" required />
 
                 <p>Repeat Password</p>
-                <input type="password" placeholder="Repeat Password" name="repeatPass" required />
+                <input type="password" className={styles["input"]} placeholder="Repeat Password" name="repeatPass" required />
                 <hr />
 
-                <input type="submit" className="registerbtn" value="Register" />
+                <input type="submit" className={styles["registerbtn"]} value="Register" />
             </form>
-            <div className="signin">
+            <div className={styles["signin"]}>
                 <p>Already have an account?
-                    <Link to="/login">Sign in</Link>.
+                    <Link to="/login" className={styles["link"]}>Sign in</Link>.
                 </p>
             </div>
         </div>

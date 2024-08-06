@@ -1,0 +1,43 @@
+.container {
+    background-color: white;
+    padding: 16px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+.input {
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    width: 100%;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.createbtn {
+    background-color: #b6440f;
+    color: white;
+    padding: 16px 28px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.createbtn:hover {
+    opacity: 1;
+}
+
