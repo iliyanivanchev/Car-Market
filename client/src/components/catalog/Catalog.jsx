@@ -5,8 +5,7 @@ import { get } from "../../api/requester";
 import styles from "./Catalog.module.css";
 
 import SingleCar from "./single-car/SingleCar";
-
-const url = 'http://localhost:3030/data/cars'
+import { getAll } from "../../api/car-api";
 
 export default function Catalog() {
     const [cars, setCars] = useState([]);
@@ -14,7 +13,7 @@ export default function Catalog() {
     useEffect(() => {
         (async function getCars() {
             try {
-                const carsResult = await get(url);
+                const carsResult = await getAll();                
                 
                 setCars(carsResult)
             } catch (error) {
