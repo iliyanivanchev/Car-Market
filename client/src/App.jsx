@@ -25,7 +25,7 @@ function App() {
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/car-create" element={<CarCreate />} />
                     <Route path="/car-edit" element={<CarEdit />} />
-                    <Route path="/car-details" element={<CarDetails />} />
+                    <Route path="/car-details/:carId" element={<CarDetails />} />
                 </Routes>
             </main>
 

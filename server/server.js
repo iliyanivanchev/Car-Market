@@ -1649,7 +1649,7 @@
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "brand": "Audi",
                 "model": "A3",
-                "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+                "description": "Design and light: more dynamic, expressive, and individual than ever. Infotainment: digital operating concept with new interactive functions. Driving experience: top performance combined with great efficiency and increased comfort",
                 "year": 2018,
                 "imageUrl": "https://uploads.audi-mediacenter.com/system/production/media/90567/images/72391bd2d21a80a761f0df1bd5bff197d5804daa/A201895_web_2880.jpg?1698421086",
                 "price": 25000,

@@ -7,7 +7,7 @@ export default function Home() {
         <section className={styles["main"]}>
             <div className={styles["welcome-container"]}>
                 <h1>Welcome to our Car Market</h1>
-                <img className={styles["hero"]} src="/images/car-logo.webp" alt="carIntro" />
+                <img className={styles["hero"]} src="/images/lambo-logo.webp" alt="carIntro" />
                 <h2>To see all the listings click the link below:</h2>
                 <div>
                     <Link to="/catalog" className={styles["button"]}>Listings</Link>

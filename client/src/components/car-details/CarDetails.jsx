@@ -1,28 +1,49 @@
 import styles from "./CarDetails.module.css";
 
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+import { Link, useParams } from "react-router-dom";
+
+import { get } from "../../api/requester";
 
 
 export default function CarDetails() {
+    const params = useParams();
+    const carId = params.carId;    
+    
+    const url = `http://localhost:3030/data/cars/${carId}`
+    const [car, setCar] = useState([]);
+    
+    useEffect(() => {
+        (async function getCar() {
+            try {
+                const carResult = await get(url);
+                             
+                
+                setCar(carResult)
+            } catch (error) {
+                alert(error.message);
+            }
+        })();
+    }, []);
+
     return (
         <section className={styles["listing-details"]}>
         <h1>Details</h1>
         <div className={styles["details-info"]}>
-            <img src="/images/audia3.jpg" />
+            <img src={car.imageUrl} />
             <hr />
             <ul className={styles["listing-props"]}>
-                <li><span>Brand:</span>Audi</li>
-                <li><span>Model:</span>A3</li>
-                <li><span>Year:</span>2018</li>
-                <li><span>Price:</span>25000$</li>
+                <li><span>Brand:</span>{car.brand}</li>
+                <li><span>Model:</span>{car.model}</li>
+                <li><span>Year:</span>{car.year}</li>
+                <li><span>Price:</span>{car.price}$</li>
             </ul>
 
-            <p className={styles["description-para"]}>Some description of this car. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Sunt voluptate quam nesciunt ipsa veritatis voluptas optio debitis repellat porro
-                sapiente.</p>
+            <p className={styles["description-para"]}>{car.description}</p>
 
             <div className={styles["listings-buttons"]}>
-                <Link to="/car-edit" className={styles["button-list"]}>Edit</Link>
+                <Link to="#" className={styles["button-list"]}>Edit</Link>
                 <Link to="#" className={styles["button-list"]}>Delete</Link>
             </div>
         </div>

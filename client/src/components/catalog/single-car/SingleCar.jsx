@@ -16,7 +16,7 @@ export default function SingleCar({
                     <h3 className={styles["data-info-h3"]}>Price: {car.price} $</h3>
                 </div>
                 <div>
-                    <Link to="/car-details" className={styles["button-carDetails"]}>Details</Link>
+                    <Link to={`/car-details/${car._id}`} className={styles["button-carDetails"]}>Details</Link>
                 </div>
             </div>
         </div>
