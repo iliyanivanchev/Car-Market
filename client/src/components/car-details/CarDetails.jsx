@@ -5,23 +5,12 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import { getOne } from "../../api/car-api";
+import { useGetOne } from "../../hooks/useCars";
 
 
 export default function CarDetails() {
     const { carId } = useParams();
-    const [car, setCar] = useState({});
-
-    useEffect(() => {
-        (async function getCar() {
-            try {
-                const carResult = await getOne(carId);
-
-                setCar(carResult)
-            } catch (error) {
-                alert(error.message);
-            }
-        })();
-    }, []);
+    const [car] = useGetOne(carId);
 
     return (
         <section className={styles["listing-details"]}>
