@@ -13,7 +13,7 @@ export default function Catalog() {
     useEffect(() => {
         (async function getCars() {
             try {
-                const carsResult = await getAll();                
+                const carsResult = await getAll();
                 
                 setCars(carsResult)
             } catch (error) {
