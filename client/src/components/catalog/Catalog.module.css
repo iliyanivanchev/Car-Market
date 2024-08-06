@@ -8,3 +8,9 @@
     font-size: 30px;
     text-align: center;
 }
+
+.car-listings h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 50px;
+}

@@ -6,7 +6,7 @@ export default function CarEdit() {
             <div className={styles["container"]}>
 
                 <form id="edit-form">
-                    <h1>Edit Car</h1>
+                    <h1>Edit Car Listing</h1>
                     <p>Please fill in this form to edit a car listing.</p>
                     <hr />
 

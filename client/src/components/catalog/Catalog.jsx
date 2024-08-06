@@ -24,7 +24,7 @@ export default function Catalog() {
     }, []);
 
     return (
-        <section id="car-listings">
+        <section className={styles["car-listings"]}>
             <h1>Car Listings</h1>
             <div className={styles["listings"]}>
                 {

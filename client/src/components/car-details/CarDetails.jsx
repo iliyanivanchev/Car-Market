@@ -1,10 +1,11 @@
+import styles from "./CarDetails.module.css";
+
 import { Link } from "react-router-dom";
 
-import styles from "./CarDetails.module.css";
 
 export default function CarDetails() {
     return (
-        <section id="listing-details">
+        <section className={styles["listing-details"]}>
         <h1>Details</h1>
         <div className={styles["details-info"]}>
             <img src="/images/audia3.jpg" />

@@ -23,8 +23,13 @@
 
 .nav a.active {
     background-color: #b6440f;
+    opacity: 0.9;
     color: white;
     padding: 14px 34px;
+}
+
+.nav a.active:hover {
+    opacity: 1;
 }
 
 .nav p {

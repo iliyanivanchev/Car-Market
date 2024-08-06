@@ -15,6 +15,8 @@ export default function Login() {
 
                     <p>Password</p>
                     <input type="password" className={styles["input"]} placeholder="Enter Password" name="password" />
+                    <hr />
+                    
                     <input type="submit" className={styles["loginbtn"]} value="Login" />
                 </form>
                 <div className={styles["signin"]}>

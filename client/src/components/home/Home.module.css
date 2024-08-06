@@ -1,39 +1,20 @@
-/* #main {
+.main {
     background-color: white;
     font-family: 'Lato', sans-serif;
     background-color: #ccc;
 }
 
-h1 {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 50px;
-}
-
-h2 {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.button {
-    background-color: #b6440f;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 5px;
-    border-radius: 3px;
-    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
-}
-
-#welcome-container {
+.welcome-container {
     width: 50%;
     margin: auto;
     text-align: center;
     
+}
+
+.welcome-container h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 50px;
 }
 
 .hero {
@@ -43,9 +24,26 @@ h2 {
     box-shadow: 0 0.3rem 1.5rem 0.3rem rgba(0,0,0,0.3); 
 }
 
-#button-div {
-    padding-top: 10px;
-    width: 37%;
-    margin: auto;
-    display: flex;
-} */
+.welcome-container h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.button {
+    background-color: #b6440f;
+    color: white;
+    padding: 15px 32px;
+    margin: 5px;
+    border: none;
+    opacity: 0.9;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.button:hover {
+    opacity: 1;
+}
