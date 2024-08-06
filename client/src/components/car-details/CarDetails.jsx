@@ -43,7 +43,7 @@ export default function CarDetails() {
             <p className={styles["description-para"]}>{car.description}</p>
 
             <div className={styles["listings-buttons"]}>
-                <Link to="#" className={styles["button-list"]}>Edit</Link>
+                <Link to={`/car-edit/${car._id}`} className={styles["button-list"]}>Edit</Link>
                 <Link to="#" className={styles["button-list"]}>Delete</Link>
             </div>
         </div>

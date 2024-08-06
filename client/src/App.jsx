@@ -24,7 +24,7 @@ function App() {
                     <Route path="/register" element={<Register />} />
                     <Route path="/catalog" element={<Catalog />} />
                     <Route path="/car-create" element={<CarCreate />} />
-                    <Route path="/car-edit" element={<CarEdit />} />
+                    <Route path="/car-edit/:carId" element={<CarEdit />} />
                     <Route path="/car-details/:carId" element={<CarDetails />} />
                 </Routes>
             </main>
