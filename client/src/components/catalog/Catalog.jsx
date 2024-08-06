@@ -1,26 +1,10 @@
-import { useEffect, useState } from "react";
-
-import { get } from "../../api/requester";
-
 import styles from "./Catalog.module.css";
 
 import SingleCar from "./single-car/SingleCar";
-import { getAll } from "../../api/car-api";
+import { useGetCars } from "../../hooks/useCars";
 
 export default function Catalog() {
-    const [cars, setCars] = useState([]);
-
-    useEffect(() => {
-        (async function getCars() {
-            try {
-                const carsResult = await getAll();
-                
-                setCars(carsResult)
-            } catch (error) {
-                alert(error.message);
-            }
-        })();
-    }, []);
+    const [cars] = useGetCars()
 
     return (
         <section className={styles["car-listings"]}>
