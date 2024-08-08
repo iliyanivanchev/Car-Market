@@ -10,7 +10,7 @@ export default function NotFound() {
             <hr className={styles["hr"]}/>
             <div className={styles["btn-section"]}>
                 <Link to="/" className={styles["homebtn"]}>Go back home</Link>
-                <Link to="/about" className={styles["link"]}>Contact support<span aria-hidden="true"></span>
+                <Link to="/contact-us" className={styles["link"]}>Contact support<span aria-hidden="true"></span>
                 </Link>
             </div>
         </div>
