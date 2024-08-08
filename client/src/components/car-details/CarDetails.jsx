@@ -1,10 +1,7 @@
 import styles from "./CarDetails.module.css";
 
-import { useEffect, useState } from "react";
-
 import { Link, useParams } from "react-router-dom";
 
-import { getOne } from "../../api/car-api";
 import { useGetOne } from "../../hooks/useCars";
 
 

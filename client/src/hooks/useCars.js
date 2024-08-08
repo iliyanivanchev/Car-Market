@@ -32,7 +32,7 @@ export function useGetOne(carId) {
                 alert(error.message);
             }
         })();
-    }, []);
+    }, [carId]);
 
     return [car];
 }
