@@ -10,6 +10,7 @@ import CarEdit from "./components/car-edit/CarEdit"
 import CarDetails from "./components/car-details/CarDetails"
 import Footer from "./components/footer/Footer"
 import { Route, Routes } from "react-router-dom"
+import NotFound from "./components/notFound/NotFound";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                     <Route path="/car-create" element={<CarCreate />} />
                     <Route path="/car-edit/:carId" element={<CarEdit />} />
                     <Route path="/car-details/:carId" element={<CarDetails />} />
+                    <Route path="/*" element={<NotFound />} />
                 </Routes>
             </main>
 
