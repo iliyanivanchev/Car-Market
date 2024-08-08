@@ -1,0 +1,54 @@
+.container {
+    background-color: white;
+    padding: 16px;
+    text-align: center;
+    max-width: 860px;
+    margin: 100px auto;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.container h1 {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 50px;
+}
+
+.container-P {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 90px;
+}
+
+.container-p {
+    text-align: center;
+    margin: 8px auto;
+    font-size: 16px;
+}
+
+.hr {
+    border: 1px solid #f1f1f1;
+}
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.homebtn {
+    background-color: #b6440f;
+    color: white;
+    padding: 16px 28px;
+    margin-right: 50px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.homebtn:hover {
+    opacity: 1;
+}

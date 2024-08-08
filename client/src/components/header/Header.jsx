@@ -8,6 +8,7 @@ export default function Header() {
             <nav className={styles["nav"]}>
                 <Link className={styles["active"]} to="/">Home</Link>
                 <Link to="/catalog">Catalog</Link>
+                <Link to="/about">About</Link>
                 <div className={styles["guest"]}>
                     <Link to="/login">Login</Link>
                     <Link to="/register">Register</Link>
