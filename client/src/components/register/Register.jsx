@@ -8,6 +8,7 @@ import { AuthContext } from '../../contexts/AuthContexts';
 export default function Register() {
     const { changeAuthState } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, setError] = useState('');
     const [values, setValues] = useState({ email: "", password: "", repeatPass: "" });
 
     const changeHandler = (e) => {
@@ -16,8 +17,14 @@ export default function Register() {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        if (values.password !== values.repeatPass) {
-            throw new Error("Password and Repeat Password must be the same");
+        if (values.email === "") {
+            return setError('Email can not be empty!')
+        } else if (values.password === "") {
+            return setError('Password can not be empty!')
+        }  else if (values.repeatPass === "") {
+            return setError('Repeat Password can not be empty!')
+        } else if (values.password !== values.repeatPass) {
+            return setError('Password and Repeat Password must be the same!')
         }
         try {
             const {password, repeatPass, ...authData} = await register(values);
@@ -26,7 +33,7 @@ export default function Register() {
 
             navigate("/")
         } catch (error) {
-            alert(error.message);
+            setError(error.message);
         }
     }
     return (
@@ -43,7 +50,6 @@ export default function Register() {
                         className={styles["input"]}
                         placeholder="Enter Email"
                         name="email"
-                        required
                         value={values.email}
                         onChange={changeHandler}
                     />
@@ -54,7 +60,6 @@ export default function Register() {
                         className={styles["input"]}
                         placeholder="Enter Password"
                         name="password"
-                        required
                         value={values.password}
                         onChange={changeHandler}
                     />
@@ -65,10 +70,14 @@ export default function Register() {
                         className={styles["input"]}
                         placeholder="Repeat Password"
                         name="repeatPass"
-                        required
                         value={values.repeatPass}
                         onChange={changeHandler}
                     />
+                    {error && (
+                        <p className={styles["error"]}>
+                            <span>{error}</span>
+                        </p>
+                    )}
                     <hr className={styles["hr"]} />
 
                     <input type="submit" className={styles["registerbtn"]} value="Register" />
