@@ -1,9 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
 import styles from './Register.module.css';
-import { useState } from "react";
+
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { register } from "../../api/auth-api";
+import { AuthContext } from '../../contexts/AuthContexts';
 
 export default function Register() {
+    const { changeAuthState } = useContext(AuthContext);
     const navigate = useNavigate();
     const [values, setValues] = useState({ email: "", password: "", repeatPass: "" });
 
@@ -13,13 +16,14 @@ export default function Register() {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        if (values.password !== values.repeatPass) {
+            throw new Error("Password and Repeat Password must be the same");
+        }
         try {
-            if(values.password !== values.repeatPass) {
-                throw new Error("Password and Repeat Password must be the same");
-            }
-            const dataResult = await register(values);
-            console.log(dataResult);
-            
+            const {password, repeatPass, ...authData} = await register(values);
+
+            changeAuthState(authData);
+
             navigate("/")
         } catch (error) {
             alert(error.message);
@@ -65,7 +69,7 @@ export default function Register() {
                         value={values.repeatPass}
                         onChange={changeHandler}
                     />
-                    <hr className={styles["hr"]}/>
+                    <hr className={styles["hr"]} />
 
                     <input type="submit" className={styles["registerbtn"]} value="Register" />
                 </form>
