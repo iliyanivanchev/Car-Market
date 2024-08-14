@@ -14,30 +14,33 @@ import Footer from "./components/footer/Footer";
 import NotFound from "./components/notFound/NotFound";
 import ContactUs from "./components/contact-us/ContactUs";
 import About from "./components/about/About";
+import { AuthContextProvider } from "./contexts/AuthContexts";
 
 function App() {
 
     return (
-        <div className={styles["container"]}>
-            <Header />
+        <AuthContextProvider>
+            <div className={styles["container"]}>
+                <Header />
 
-            <main className={styles["site-content"]}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/catalog" element={<Catalog />} />
-                    <Route path="/car-create" element={<CarCreate />} />
-                    <Route path="/car-edit/:carId" element={<CarEdit />} />
-                    <Route path="/car-details/:carId" element={<CarDetails />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact-us" element={<ContactUs />} />
-                    <Route path="/*" element={<NotFound />} />
-                </Routes>
-            </main>
+                <main className={styles["site-content"]}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/catalog" element={<Catalog />} />
+                        <Route path="/car-create" element={<CarCreate />} />
+                        <Route path="/car-edit/:carId" element={<CarEdit />} />
+                        <Route path="/car-details/:carId" element={<CarDetails />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact-us" element={<ContactUs />} />
+                        <Route path="/*" element={<NotFound />} />
+                    </Routes>
+                </main>
 
-            <Footer />
-        </div>
+                <Footer />
+            </div>
+        </AuthContextProvider>
     )
 }
 

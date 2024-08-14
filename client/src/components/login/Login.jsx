@@ -1,12 +1,15 @@
 import styles from './Login.module.css';
 
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { login } from '../../api/auth-api';
+import { AuthContext } from '../../contexts/AuthContexts';
 
 
 export default function Login() {
+    const { changeAuthState } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, setError] = useState('');
     const [values, setValues] = useState({ email: "", password: "" });
 
     const changeHandler = (e) => {
@@ -15,16 +18,13 @@ export default function Login() {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        try{
-            const dataResult = await login(values);
-            if (dataResult.code === 403) {
-                throw new Error(dataResult.message);
-            }
-            console.log(dataResult);
-            
+        try {
+            const { password, ...authData } = await login(values);
+            changeAuthState(authData);
+
             navigate("/")
         } catch (error) {
-            alert(error.message);
+            setError(`Email or Password don't match!`);
         }
     }
 
@@ -57,7 +57,12 @@ export default function Login() {
                         value={values.password}
                         onChange={changeHandler}
                     />
-                    <hr className={styles["hr"]}/>
+                    {error && (
+                        <p className={styles["error"]}>
+                            <span>{error}</span>
+                        </p>
+                    )}
+                    <hr className={styles["hr"]} />
 
                     <input type="submit" className={styles["loginbtn"]} value="Login" />
                 </form>
