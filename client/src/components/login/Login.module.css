@@ -64,3 +64,9 @@
     color: dodgerblue;
     padding-left: 10px;
 }
+
+.error {
+    color: red;
+    text-align: center;
+    font-size:  20px;
+}

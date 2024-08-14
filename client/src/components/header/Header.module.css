@@ -45,3 +45,7 @@
     background-color: #ddd;
     color: black;
 }
+
+.nav p.email {
+    float: right;
+}
