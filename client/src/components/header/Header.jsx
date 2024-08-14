@@ -16,7 +16,6 @@ export default function Header() {
                 <Link to="/contact-us">Contact Us</Link>
                 {isAuthenticated
                     ? (<div className={styles["profile"]}>
-                        {/* <p>Welcome username</p> */}
                         <Link to="/car-create">Create Listing</Link>
                         <Link to="/logout">Logout</Link>
                     </div>)

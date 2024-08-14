@@ -2,6 +2,7 @@ import styles from './Register.module.css';
 
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
+
 import { register } from "../../api/auth-api";
 import { AuthContext } from '../../contexts/AuthContexts';
 

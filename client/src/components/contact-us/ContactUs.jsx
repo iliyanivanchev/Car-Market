@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import styles from './ContactUs.module.css';
+
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ContactUs() {

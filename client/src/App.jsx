@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 
 import { Route, Routes } from "react-router-dom";
+import { AuthContextProvider } from "./contexts/AuthContexts";
 
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
@@ -14,7 +15,6 @@ import Footer from "./components/footer/Footer";
 import NotFound from "./components/notFound/NotFound";
 import ContactUs from "./components/contact-us/ContactUs";
 import About from "./components/about/About";
-import { AuthContextProvider } from "./contexts/AuthContexts";
 
 function App() {
 
