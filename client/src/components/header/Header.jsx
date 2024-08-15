@@ -11,16 +11,20 @@ export default function Header() {
     return (
         <header>
             <nav className={styles["nav"]}>
-                <Link className={styles["active"]} to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact-us">Contact Us</Link>
+                <div>
+                    <Link to="/" className={styles["active"]}>Home</Link>
+                    <Link to="/catalog">Catalog</Link>
+                </div>
+                <div>
+                    <Link to="/about" className={styles["center"]}>About</Link>
+                    <Link to="/contact-us" className={styles["center"]}>Contact Us</Link>
+                </div>
                 {isAuthenticated
                     ? (<div className={styles["profile"]}>
                         <Link to="/car-create">Create Listing</Link>
                         <Link to="/logout">Logout</Link>
                     </div>)
                     : (<div className={styles["guest"]}>
-                        <Link to="/catalog">Catalog</Link>
                         <Link to="/login">Login</Link>
                         <Link to="/register">Register</Link>
                     </div>)
