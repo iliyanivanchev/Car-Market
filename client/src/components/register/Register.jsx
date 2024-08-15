@@ -27,9 +27,13 @@ export default function Register() {
         } else if (values.password !== values.repeatPass) {
             return setError('Password and Repeat Password must be the same!')
         }
+        
         try {
-            const {password, repeatPass, ...authData} = await register(values);
-
+            const {password, ...authData} = await register({
+                email: values.email,
+                password: values.password
+            });
+            
             changeAuthState(authData);
 
             navigate("/")
