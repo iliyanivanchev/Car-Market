@@ -14,3 +14,5 @@ export const register = async (values) => {
 
     return authData;
 }
+
+export const logout = async () => await requester.get(`${BASE_URL}/logout`)

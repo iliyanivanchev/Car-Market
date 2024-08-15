@@ -1,5 +1,5 @@
-async function requester(method, url, data) {    
-    
+async function requester(method, url, data) {
+
     const options = {};
 
     const accessToken = localStorage.getItem('accessToken');
@@ -22,14 +22,19 @@ async function requester(method, url, data) {
         };
         options.body = JSON.stringify(data);
     }
-    
+
     const response = await fetch(url, options);
-    const result = await response.json();    
+    
+    if (response.status === 204) {
+        return;
+    };
+
+    const result = await response.json();
 
     if (!response.ok) {
         throw result;
     }
-    
+
     return result;
 }
 
