@@ -2,7 +2,7 @@ import styles from "./CarCreate.module.css";
 
 import { useState } from "react";
 import { create } from "../../api/car-api";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const initialValues = {
     brand: "",
@@ -28,7 +28,7 @@ export default function CarCreate() {
             return setError('Car Brand can not be empty!')
         } else if (values.model === "") {
             return setError('Car Model can not be empty!')
-        }  else if (values.description === "") {
+        } else if (values.description === "") {
             return setError('Description can not be empty!')
         } else if (values.year === "") {
             return setError('Car Year can not be empty!')
@@ -119,7 +119,10 @@ export default function CarCreate() {
                         </p>
                     )}
                     <hr className={styles["hr"]} />
-                    <input type="submit" className={styles["createbtn"]} value="Create Car Listing" />
+                    <div className={styles["btn-section"]}>
+                        <input type="submit" className={styles["createbtn"]} value="Create Car Listing" />
+                        <Link to={"/"} className={styles["cancel-btn"]}>Cancel</Link>
+                    </div>
                 </form>
             </div>
         </section>

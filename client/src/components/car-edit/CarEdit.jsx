@@ -1,6 +1,6 @@
 import styles from "./CarEdit.module.css";
 
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { useGetOne } from "../../hooks/useCars";
@@ -137,7 +137,10 @@ export default function CarEdit() {
                         </p>
                     )}
                     <hr />
-                    <input type="submit" className={styles["editbtn"]} value="Edit Listing" />
+                    <div className={styles["btn-section"]}>
+                        <input type="submit" className={styles["edit-btn"]} value="Edit Listing" />
+                        <Link to={`/car-details/${carId}`} className={styles["cancel-btn"]}>Cancel</Link>
+                    </div>
                 </form>
             </div>
         </section>
