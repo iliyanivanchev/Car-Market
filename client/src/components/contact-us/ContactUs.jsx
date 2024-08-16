@@ -10,9 +10,6 @@ export default function ContactUs() {
         setValues(oldValues => ({ ...oldValues, [e.target.name]: e.target.value }))
     };
 
-    console.log(values);
-
-
     return (
         <section>
             <div className={styles["container"]}>

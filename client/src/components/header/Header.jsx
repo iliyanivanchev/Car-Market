@@ -15,10 +15,6 @@ export default function Header() {
                     <Link to="/" className={styles["active"]}>Home</Link>
                     <Link to="/catalog">Catalog</Link>
                 </div>
-                <div>
-                    <Link to="/about" className={styles["center"]}>About</Link>
-                    <Link to="/contact-us" className={styles["center"]}>Contact Us</Link>
-                </div>
                 {isAuthenticated
                     ? (<div className={styles["profile"]}>
                         <Link to="/car-create">Create Listing</Link>
