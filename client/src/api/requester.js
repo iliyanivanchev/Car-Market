@@ -1,10 +1,6 @@
 import { getAccessToken } from "../utils/authUtils";
 
-async function requester(method, url, data) {
-    console.log(method);
-    console.log(url);
-    console.log(data);
-    
+async function requester(method, url, data) {    
 
     const options = {};
 

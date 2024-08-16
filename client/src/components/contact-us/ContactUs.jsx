@@ -1,8 +1,8 @@
 import styles from './ContactUs.module.css';
 
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { create, createMessage } from '../../api/car-api';
+import { useNavigate } from 'react-router-dom';
+import { createMessage } from '../../api/car-api';
 
 export default function ContactUs() {
     const [error, setError] = useState('');
@@ -16,20 +16,18 @@ export default function ContactUs() {
     const submitHandler = async (e) => {
         e.preventDefault();
         if (message.name === "") {
-            return setError('Car Brand can not be empty!')
+            return setError('Name can not be empty!')
         } else if (message.email === "") {
-            return setError('Car Model can not be empty!')
+            return setError('Email can not be empty!')
         } else if (message.textarea === "") {
-            return setError('Description can not be empty!')
+            return setError('Message can not be empty!')
         }
         try {
-            const emailSend = await createMessage(message);
-            console.log(emailSend);
-            
+            const emailSend = await createMessage(message);            
 
             navigate("/")
         } catch (error) {
-            setError(error.message);
+            setError("You need to be logged in to send Us a message!");
         }
     }
 
@@ -47,7 +45,6 @@ export default function ContactUs() {
                         className={styles["input"]}
                         placeholder="John Doe"
                         name="name"
-                        required
                         value={message.name}
                         onChange={changeHandler}
                     />
@@ -58,7 +55,6 @@ export default function ContactUs() {
                         className={styles["input"]}
                         placeholder="JohnDoe@gmail.com"
                         name="email"
-                        required
                         value={message.email}
                         onChange={changeHandler}
                     />
@@ -69,7 +65,6 @@ export default function ContactUs() {
                         className={styles["input"]}
                         placeholder="Some text here ..."
                         name="textarea"
-                        required
                         rows={10}
                         value={message.textarea}
                         onChange={changeHandler}
@@ -80,7 +75,6 @@ export default function ContactUs() {
                         )}
                     <hr className={styles["hr"]} />
                     <div className={styles["btn-section"]}>
-                        {/* <Link to="#" className={styles["send"]}>Send Us <span aria-hidden="true">&rarr;</span></Link> */}
                         <input type="submit" className={styles["send"]} value="Send Us"/>
                     </div>
                 </form>
