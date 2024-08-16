@@ -23,11 +23,10 @@ export default function CarDelete() {
     return (
         <div className={styles["container"]}>
             <h2 className={styles["container-P"]}>Are you sure you wont to delete this listing?</h2>
-            {error && (
-                        <p className={styles["error"]}>
-                            <span>{error}</span>
-                        </p>
-                    )}
+            {error &&
+                (
+                    <span className={styles["error"]}>{error}</span>
+                )}
             <hr className={styles["hr"]} />
             <div className={styles["btn-section"]}>
                 <button className={styles["confirm-btn"]} onClick={deleteHandler}>Confirm</button>

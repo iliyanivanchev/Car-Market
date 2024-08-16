@@ -9,6 +9,7 @@
 }
 
 .container-P {
+    display: block;
     text-align: center;
     margin: 30px auto;
     font-size: 35px;
@@ -16,10 +17,12 @@
 
 .hr {
     border: 1px solid #f1f1f1;
+    margin-top: 10px;
 }
 
 .btn-section {
     display: flex;
+    gap: 50px;
     justify-content: center;
     margin: 50px auto;
 }
@@ -28,7 +31,6 @@
     background-color: #b6440f;
     color: white;
     padding: 16px 28px;
-    margin-right: 50px;
     border: none;
     cursor: pointer;
     opacity: 0.9;
@@ -45,7 +47,6 @@
     background-color: #b6440f;
     color: white;
     padding: 16px 28px;
-    margin-right: 50px;
     border: none;
     cursor: pointer;
     opacity: 0.9;
