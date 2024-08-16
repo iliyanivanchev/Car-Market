@@ -1,10 +1,10 @@
 import styles from "./CarDetails.module.css";
 
+import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContexts";
 
 import { useGetOne } from "../../hooks/useCars";
-import { useContext } from "react";
-import { AuthContext } from "../../contexts/AuthContexts";
 
 
 export default function CarDetails() {
@@ -31,8 +31,8 @@ export default function CarDetails() {
 
                 {isOwner && (
                     <div className={styles["listings-buttons"]}>
-                        <Link to={`/car-edit/${car._id}`} className={styles["button-list"]}>Edit</Link>
-                        <Link to="#" className={styles["button-list"]}>Delete</Link>
+                        <Link to={`/car-edit/${carId}`} className={styles["button-list"]}>Edit</Link>
+                        <Link to={`/car-delete/${carId}`} className={styles["button-list"]}>Delete</Link>
                     </div>
                 )}
             </div>

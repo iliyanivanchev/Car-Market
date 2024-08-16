@@ -16,6 +16,7 @@ import Footer from "./components/footer/Footer";
 import NotFound from "./components/notFound/NotFound";
 import ContactUs from "./components/contact-us/ContactUs";
 import About from "./components/about/About";
+import CarDelete from "./components/car-delete/CarDelete";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
                         <Route path="/catalog" element={<Catalog />} />
                         <Route path="/car-create" element={<CarCreate />} />
                         <Route path="/car-edit/:carId" element={<CarEdit />} />
+                        <Route path="/car-delete/:carId" element={<CarDelete />} />
                         <Route path="/car-details/:carId" element={<CarDetails />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact-us" element={<ContactUs />} />
