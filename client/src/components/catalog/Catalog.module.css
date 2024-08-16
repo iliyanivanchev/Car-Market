@@ -14,3 +14,27 @@
     margin: 30px 0;
     font-size: 50px;
 }
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    margin: 220px auto;
+}
+
+.button {
+    background-color: #b6440f;
+    color: white;
+    padding: 15px 32px;
+    margin: 0 auto;
+    border: none;
+    opacity: 0.9;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
+}
+
+.button:hover {
+    opacity: 1;
+}
