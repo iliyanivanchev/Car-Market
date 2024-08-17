@@ -6,25 +6,16 @@ import { useEffect, useState } from "react";
 import { useGetOne } from "../../hooks/useCars";
 import { edit } from "../../api/car-api";
 
-const initialValues = {
-    brand: "",
-    model: "",
-    description: "",
-    year: "",
-    imageUrl: "",
-    price: ""
-}
-
 export default function CarEdit() {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const { carId } = useParams();
     const [car] = useGetOne(carId);
 
-    const [values, setValues] = useState(Object.assign(initialValues, car));
+    const [values, setValues] = useState(car);    
 
     useEffect(() => {
-        setValues(initialValues)
+        setValues(car)
     }, [car]);
 
     const changeHandler = (e) => {

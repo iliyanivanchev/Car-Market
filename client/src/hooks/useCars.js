@@ -8,7 +8,7 @@ export function useGetCars() {
         (async function getCars() {
             try {
                 const carsResult = await getAll();
-                
+
                 setCars(carsResult)
             } catch (error) {
                 alert(error.message);
@@ -20,7 +20,14 @@ export function useGetCars() {
 }
 
 export function useGetOne(carId) {
-    const [car, setCar] = useState({});
+    const [car, setCar] = useState({
+        brand: "",
+        model: "",
+        description: "",
+        year: "",
+        imageUrl: "",
+        price: ""
+    });
 
     useEffect(() => {
         (async function getCar() {
