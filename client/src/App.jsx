@@ -12,11 +12,12 @@ import Catalog from "./components/catalog/Catalog";
 import CarCreate from "./components/car-create/CarCreate";
 import CarEdit from "./components/car-edit/CarEdit";
 import CarDetails from "./components/car-details/CarDetails";
+import CarDelete from "./components/car-delete/CarDelete";
 import Footer from "./components/footer/Footer";
-import NotFound from "./components/notFound/NotFound";
 import ContactUs from "./components/contact-us/ContactUs";
 import About from "./components/about/About";
-import CarDelete from "./components/car-delete/CarDelete";
+import NotFound from "./components/notFound/NotFound";
+import PrivateGuard from "./guard/PrivateGuard";
 
 function App() {
 
@@ -30,11 +31,13 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
-                        <Route path="/logout" element={<Logout />} />
                         <Route path="/catalog" element={<Catalog />} />
-                        <Route path="/car-create" element={<CarCreate />} />
-                        <Route path="/car-edit/:carId" element={<CarEdit />} />
-                        <Route path="/car-delete/:carId" element={<CarDelete />} />
+                        <Route element={<PrivateGuard />}>
+                            <Route path="/logout" element={<Logout />} />
+                            <Route path="/car-create" element={<CarCreate />} />
+                            <Route path="/car-edit/:carId" element={<CarEdit />} />
+                            <Route path="/car-delete/:carId" element={<CarDelete />} />
+                        </Route>
                         <Route path="/car-details/:carId" element={<CarDetails />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/contact-us" element={<ContactUs />} />
@@ -48,4 +51,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
