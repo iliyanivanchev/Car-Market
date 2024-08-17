@@ -24,7 +24,7 @@ export default function Login() {
 
             navigate("/")
         } catch (error) {
-            setError(`Email or Password don't match!`);
+            setError(error.message);
         }
     }
 

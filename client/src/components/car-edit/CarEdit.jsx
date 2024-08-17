@@ -50,7 +50,7 @@ export default function CarEdit() {
             })
             navigate(`/car-details/${carId}`);
         } catch (error) {
-            setError("You need to be logged in to make changes!");
+            setError(error.message);
         }
     }
 
@@ -61,7 +61,7 @@ export default function CarEdit() {
                 <form id="edit-form" onSubmit={submitHandler}>
                     <h1>Edit Car Listing</h1>
                     <p>Please fill in this form to edit a car listing.</p>
-                    <hr />
+                    <hr className={styles["hr"]} />
 
                     <p>Car Brand</p>
                     <input
@@ -127,7 +127,7 @@ export default function CarEdit() {
                             <span>{error}</span>
                         </p>
                     )}
-                    <hr />
+                    <hr className={styles["hr"]} />
                     <div className={styles["btn-section"]}>
                         <input type="submit" className={styles["edit-btn"]} value="Edit Listing" />
                         <Link to={`/car-details/${carId}`} className={styles["cancel-btn"]}>Cancel</Link>

@@ -43,7 +43,7 @@ export default function CarCreate() {
 
             navigate("/catalog")
         } catch (error) {
-            setError("You need to be logged in to create car listing!");
+            setError(error.message);
         }
     }
     return (

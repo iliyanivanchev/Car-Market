@@ -1,6 +1,7 @@
 .listing {
     box-sizing: border-box;
     display: inline-block;
+    background-color: #bbb;
     padding:  30px 50px;
     width: 350px;
     margin: 20px;

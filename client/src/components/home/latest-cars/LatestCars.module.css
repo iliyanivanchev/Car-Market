@@ -1,5 +1,6 @@
 .listing {
     box-sizing: border-box;
+    background-color: #bbb;
     padding: 30px 50px;
     width: 400px;
     margin: 20px 0;

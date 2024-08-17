@@ -5,13 +5,15 @@
     background-color: #ccc;
     padding: 16px;
     text-align: center;
-    width: 600px;
+    max-width: 600px;
     margin: auto;
+    border-radius: 3px;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
 }
 
 .listing {
     box-sizing: border-box;
-    text-align: left;
+    background-color: #bbb;
     padding: 30px 50px;
     width: 400px;
     margin: 20px auto;

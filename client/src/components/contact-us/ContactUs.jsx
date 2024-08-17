@@ -27,7 +27,7 @@ export default function ContactUs() {
 
             navigate("/")
         } catch (error) {
-            setError("You need to be logged in to send Us a message!");
+            setError(error.message);
         }
     }
 
