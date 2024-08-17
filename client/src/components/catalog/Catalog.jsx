@@ -5,7 +5,7 @@ import { useGetCars } from "../../hooks/useCars";
 import { Link } from "react-router-dom";
 
 export default function Catalog() {
-    const [cars] = useGetCars()
+    const [cars] = useGetCars();
 
     return (
         <section className={styles["car-listings"]}>

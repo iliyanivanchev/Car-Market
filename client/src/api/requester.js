@@ -6,7 +6,6 @@ async function requester(method, url, data) {
 
     const accessToken = getAccessToken();
     
-
     if (accessToken) {
         options.headers = {
             ...options.headers,
@@ -25,7 +24,7 @@ async function requester(method, url, data) {
         };
         options.body = JSON.stringify(data);
     }
-
+    
     const response = await fetch(url, options);
     
     if (response.status === 204) {
@@ -35,6 +34,7 @@ async function requester(method, url, data) {
     const result = await response.json();
 
     if (!response.ok) {
+        
         throw result;
     }
 

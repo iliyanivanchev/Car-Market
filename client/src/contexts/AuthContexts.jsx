@@ -13,7 +13,7 @@ export function AuthContextProvider(props) {
     const localLogout = () => {
         setAuthState(null);
     }
-    
+
     const contextData = {
         userId: authState?._id,
         email: authState?.email,

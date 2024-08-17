@@ -8,10 +8,10 @@ export default function usePersistedState(key, initialState) {
             return typeof initialState === 'function'
                 ? initialState()
                 : initialState;
-        };
+        };        
 
         const authData = JSON.parse(persistedAuth);
-
+        
         return authData;
     });
 
