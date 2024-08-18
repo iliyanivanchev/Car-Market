@@ -8,6 +8,7 @@
     margin-bottom: 50px;
     border-radius: 8px;
     border: 2px solid black;
+    box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0,0,0,0.3);
 }
 
 .listing-h2 {

@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(() => {
         (async function getCars() {
             try {
-                const response = await fetch(`http://localhost:3030/data/cars?sortBy=_createdOn%20desc&pageSize=4`);
+                const response = await fetch(`http://localhost:3030/data/cars?sortBy=_createdOn%20desc&pageSize=3`);
                 const carsResult = await response.json();
 
                 setLatestCars(carsResult)
