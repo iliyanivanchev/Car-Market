@@ -18,6 +18,11 @@ export default function Login() {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        if (values.email === "") {
+            return setError('Email can not be empty!')
+        } else if (values.password === "") {
+            return setError('Password can not be empty!')
+        }
         try {
             const { password, ...authData } = await login(values);
             changeAuthState(authData);
@@ -42,7 +47,6 @@ export default function Login() {
                         className={styles["input"]}
                         placeholder="Enter Email"
                         name="email"
-                        required
                         value={values.email}
                         onChange={changeHandler}
                     />
@@ -53,7 +57,6 @@ export default function Login() {
                         className={styles["input"]}
                         placeholder="Enter Password"
                         name="password"
-                        required
                         value={values.password}
                         onChange={changeHandler}
                     />
